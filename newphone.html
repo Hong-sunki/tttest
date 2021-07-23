@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        * { margin: 0; padding: 0; }
+        .wrap { text-align: center; }
+        .select > p:nth-of-type(1) { font-weight: bold; font-size: 1.5em; margin-top: 30px; }
+        .select > p:nth-of-type(2) { font-size: 1.2em; margin-top: 15px; margin-bottom: 30px; }
+        .selectBox form { border: 1px solid; width: 30%; margin: 0 auto; }
+        .selectBox .labelSel { display: block; font-weight: bold; border-bottom: 1px solid; padding: 15px 0;}
+        .selectBox .labelSel:nth-child(3) { border-bottom: none; margin-left: 15px;}
+        .selectBox .inputSel { margin-right: 10px; }
+        .search > p:nth-of-type(1) { font-weight: bold; font-size: 1.5em; margin-top: 30px; }
+        .search > p:nth-of-type(2) { font-size: 1.2em; margin-top: 15px; margin-bottom: 30px; }
+        .inputSearch { width: 30%; height: 50px; }
+        .btnclear { font-size: 1.2em; padding: 5px 70px; margin-top: 20px; }
+        @media (max-width:991px) {
+            .select > p:nth-of-type(1) { font-size: 1.3em; }
+            .select > p:nth-of-type(2) { font-size: 1em; }
+            .search > p:nth-of-type(1) { font-size: 1.3em; }
+            .search > p:nth-of-type(2) { font-size: 1em; }
+            .inputSearch { width: 40%; }
+        }
+        @media (max-width:767px) {
+            .selectBox form { width: 50%; }
+            .inputSearch { width: 50%; }
+        }
+        @media (max-width:500px) {
+            .select > p:nth-of-type(1) { font-size: 1.1em; }
+            .select > p:nth-of-type(2) { font-size: 0.9em; }
+            .selectBox form { width: 80%; }
+            .search > p:nth-of-type(1) { font-size: 1.1em; }
+            .search > p:nth-of-type(2) { font-size: 0.9em; }
+            .inputSearch { width: 80%; height: 40px; }
+            .btnclear { font-size: 1.1em; padding: 5px 70px;  }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="select">
+            <p>상담받을 우리동네를 선택해주세요!</p>
+            <p>지금 id님 근처의 동네를 찾아봤어요!</p>
+            <div class="selectBox">
+                <form> <!-- 안에 주소값은 선택한 값으면 변수 삽입 -->
+                    <label class="labelSel"><input class="inputSel" type="radio" name="addr" value="addr">서울시 광진구 구의동</label>
+                    <label class="labelSel"><input class="inputSel" type="radio" name="addr" value="addr">서울시 성동구 성수동</label>
+                    <label class="labelSel"><input class="inputSel" type="radio" name="addr" value="addr">서울시 성동구 왕십리동</label>
+                </form>
+            </div>
+            <div class="search">
+                <p>아니면, 다른동네?</p>
+                <p>id님이 상담받을 동네를 직접 검색해보세요!</p>
+                <div class="searchBox">
+                    <form>
+                        <input class="inputSearch" type="search">
+                    </form>
+                </div>
+                <button class="btnclear">상담신청완료!</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
